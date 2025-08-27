@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hack_Game | About</title>
+  <style>
+    :root {
+      --bg0: #0b1f0d;
+      --bg1: #12351a;
+      --accent: #5ee35e;
+      --accent2: #2ecc71;
+      --text: #e8ffe8;
+      --muted: #a7d7a7;
+      --slot: #2a4b2e;
+      --slot-edge: #0e1f10;
+      --card: #163820;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Courier New', monospace;
+      background: var(--bg0);
+      color: var(--text);
+      image-rendering: pixelated;
+    }
+
+    header {
+      background: var(--slot);
+      border-bottom: 4px solid var(--slot-edge);
+      padding: 10px;
+      text-align: center;
+      box-shadow: 0 4px 0 var(--slot-edge);
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text);
+      background: var(--card);
+      padding: 10px 15px;
+      border: 3px solid var(--slot-edge);
+      box-shadow: inset 0 -3px 0 #0006, inset 0 3px 0 #fff1;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      background: var(--accent);
+      color: #041704;
+      box-shadow: 0 3px 0 #000;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 40px auto;
+      background: var(--card);
+      border: 4px solid var(--slot-edge);
+      padding: 20px;
+      box-shadow: 0 8px 0 var(--slot-edge);
+      text-align: center;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 15px;
+      border: 3px solid var(--slot-edge);
+      background: var(--accent);
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Start</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projekte</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Über mich</h1>
+    <p>Hey! Ich bin Hack_Game, YouTuber & Coder. Ich liebe Minecraft, Mods und coole Projekte.</p>
+    <p>Ich programmiere Fabric-Mods, Texturepacks und vieles mehr. Hier auf meiner Seite findest du Infos zu meinen aktuellen Projekten!</p>
+    <button onclick="toggleTheme()">🌑 Overworld / Nether 🔥</button>
+  </main>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle("nether");
+      if (document.body.classList.contains("nether")) {
+        document.documentElement.style.setProperty("--bg0", "#1a0303");
+        document.documentElement.style.setProperty("--bg1", "#300707");
+        document.documentElement.style.setProperty("--accent", "#ff6b6b");
+        document.documentElement.style.setProperty("--accent2", "#ff9f43");
+        document.documentElement.style.setProperty("--text", "#ffecec");
+        document.documentElement.style.setProperty("--muted", "#ffc9c9");
+        document.documentElement.style.setProperty("--slot", "#3a0b0b");
+        document.documentElement.style.setProperty("--slot-edge", "#120202");
+        document.documentElement.style.setProperty("--card", "#2b0707");
+      } else {
+        document.documentElement.style.setProperty("--bg0", "#0b1f0d");
+        document.documentElement.style.setProperty("--bg1", "#12351a");
+        document.documentElement.style.setProperty("--accent", "#5ee35e");
+        document.documentElement.style.setProperty("--accent2", "#2ecc71");
+        document.documentElement.style.setProperty("--text", "#e8ffe8");
+        document.documentElement.style.setProperty("--muted", "#a7d7a7");
+        document.documentElement.style.setProperty("--slot", "#2a4b2e");
+        document.documentElement.style.setProperty("--slot-edge", "#0e1f10");
+        document.documentElement.style.setProperty("--card", "#163820");
+      }
+    }
+  </script>
+</body>
+</html>
